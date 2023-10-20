@@ -7,7 +7,7 @@ json="{"
 while IFS='=' read -r name value; do
     # Append the name of the environment variable to the JSON object
     json="$json\"$name\":null,"
-done < <(env)
+done < <(env | grep ATLANTIS | sort | grep -v ATLANTIS_GH_WEBHOOK_SECRET)
 
 # Remove the trailing comma from the JSON object
 json="${json%,}"
