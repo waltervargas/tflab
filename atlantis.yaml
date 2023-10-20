@@ -1,0 +1,13 @@
+version: 3
+projects:
+- name: p1
+  dir: p1
+  workflow: w1
+workflows:
+  w1:
+    plan:
+      steps:
+      - run: echo "Running plan for my-project"
+    apply:
+      steps:
+      - run: echo "Running apply for my-project"
