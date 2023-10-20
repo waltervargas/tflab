@@ -1,0 +1,14 @@
+version: 3
+projects:
+- name: p1
+  dir: p1
+  workflow: w1
+workflows:
+  w1:
+    plan:
+      steps:
+      - init
+      - plan
+    apply:
+      steps:
+      - apply
