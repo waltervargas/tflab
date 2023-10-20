@@ -7,7 +7,8 @@ workflows:
   w1:
     plan:
       steps:
-      - run: echo "Running plan for my-project"
+      - init
+      - plan
     apply:
       steps:
-      - run: echo "Running apply for my-project"
+      - apply
