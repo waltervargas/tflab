@@ -18,5 +18,5 @@ data "external" "example" {
 }
 
 output "custom_output" {
-  value = data.external.example.result.custom_value
+  value = data.external.example.result
 }
