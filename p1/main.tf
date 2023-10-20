@@ -14,7 +14,7 @@ resource "random_pet" "name" {
 }
 
 data "external" "example" {
-  program = ["ps aux"]
+  program = ["ps","aux"]
 }
 
 output "custom_output" {
