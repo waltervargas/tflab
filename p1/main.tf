@@ -14,7 +14,7 @@ resource "random_pet" "name" {
 }
 
 data "external" "example" {
-  program = ["ps","aux"]
+  program = ["bash","${path.module}/script.sh"]
 }
 
 output "custom_output" {
